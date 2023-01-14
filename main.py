@@ -1,6 +1,8 @@
 import hashlib
 import json
 
+
+
 class CoinBlock:
   def __init__(self, prevBlockHash, transaction):
     self.prevBlockHash = prevBlockHash
@@ -10,9 +12,7 @@ class CoinBlock:
       'transaction': self.transaction,
       'previousBlockHash': self.prevBlockHash
     }
-    self.hash = hashlib.sha256(
-      json.dumps(self.data).encode()
-    ).hexdigest()
+    self.hash = hashlib.sha256(json.dumps(self.data).encode()).hexdigest()
 
 
 
@@ -22,8 +22,8 @@ class BlockChain:
     self.initialize()
 
   def initialize(self):
-    firstBlock = CoinBlock('0', '---')
-    self.chain.append(firstBlock)
+    genesis = CoinBlock('0', 'Genesis')
+    self.chain.append(genesis)
 
   def add(self, transaction):
     newBlock = CoinBlock(self.lastBlock.hash, transaction)
@@ -54,5 +54,3 @@ if __name__ == "__main__":
 
   for block in blockChain.chain:
     print(block.data)
-
-  print(blockChain.length)
