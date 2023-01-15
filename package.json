@@ -1,0 +1,23 @@
+{
+  "name": "blockchain",
+  "version": "1.0.0",
+  "description": "Ini adalah simple blockchain buatanku.",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msulais/simple-blockchain.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/msulais/simple-blockchain/issues"
+  },
+  "homepage": "https://github.com/msulais/simple-blockchain#readme",
+  "dependencies": {
+    "jssha": "^3.3.0"
+  }
+}
